@@ -1,0 +1,44 @@
+mat-drawer-container, mat-drawer-content { 
+    display: block; height: 100%; 
+}
+main { 
+    height: 100%; overflow-y: auto; 
+}
+
+.example-sidenav-content {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .example-sidenav {
+    padding: 20px;
+  }
+
+  .mat-drawer-inner-container{
+    overflow: hidden !important;
+  }
+
+  /* ul li {
+    animation-name: scenario1;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+  }
+  
+  @keyframes scenario1 {
+      0% { transform: translate(0px,0px); }
+      100% { transform: translate(50px, 0px); }
+} */
+
+.mat-mdc-list-item-icon {
+  color: rgba(0, 0, 0, 0.54);
+}
+.mat-list .mat-list-item {
+  display: flex;
+  gap: 10px;
+}

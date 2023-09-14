@@ -1,0 +1,43 @@
+<mat-drawer-container class="example-container" fullscreen>
+    <mat-drawer #drawer class="example-sidenav" mode="side" >
+      <!-- [opened]="true" -->
+      <p>Auto-resizing sidenav</p>
+      <button (click)="rotate()" mat-raised-button>
+        Toggle extra text
+      </button>
+      <!-- <ul [@openClose]='state'>
+        <li >Home</li>
+        <li>contact</li>
+        <li>About Us</li>
+        <li>Services</li>
+    </ul> -->
+    <!-- *ngIf="showFiller" -->
+    <mat-list [@openClose] >
+      <mat-list-item *ngFor="let folder of folders" >
+        <mat-icon matListItemIcon>folder</mat-icon>
+        <div matListItemTitle>{{folder.name}}</div>
+      </mat-list-item>
+      <!-- <div mat-subheader>Folders</div> -->
+      <!-- <div matListItemLine>{{folder.updated | date}}</div> -->
+      <!-- <mat-divider></mat-divider> -->
+      <!-- <div mat-subheader>Notes</div>
+      <mat-list-item *ngFor="let note of notes">
+        <mat-icon matListItemIcon>note</mat-icon>
+        <div matListItemTitle>{{note.name}}</div>
+        <div matListItemLine>{{note.updated | date}}</div>
+      </mat-list-item> -->
+    </mat-list> 
+    </mat-drawer>
+    <mat-drawer-content><main>
+    <div class="example-sidenav-content">
+      <button type="button" mat-button (click)="rotate()">
+        <mat-icon aria-hidden="false" aria-label="Example home icon">menu
+        </mat-icon> Show Options
+        <!-- <mat-slide-toggle>Toggle me!</mat-slide-toggle> -->
+      </button>
+    </div>
+</main></mat-drawer-content>
+  </mat-drawer-container>
+
+  
+  
