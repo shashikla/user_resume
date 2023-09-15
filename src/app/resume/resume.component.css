@@ -1,0 +1,14 @@
+.mat-grid-tile{
+    border: 1px solid rgb(238, 234, 234);
+    height: 100%;
+}
+.mat-grid-tile .mat-figure {
+    justify-content: flex-start !important ;
+    align-items: flex-start !important;
+ }
+ .mat-card{
+    /* border: none !important;
+    box-shadow: unset; */
+    width: 70%;
+    margin: auto;
+ }

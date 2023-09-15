@@ -1,1 +1,103 @@
-<p>{{name}}</p>
+<!-- <p>{{name}}</p>
+<p>{{resumeDetails?.Details.Contact.Email}}</p>
+<p>{{resumeDetails?.Details.Contact.LinkedIn_Profile}}</p> -->
+<!-- <p>{{resumeDetails?.Details.Skills}}</p> -->
+<!-- <ul *ngFor="let user of resumeDetails?.Details.Skills">
+    <li>{{user}}</li>
+</ul> -->
+<!-- <div *ngFor="let user of resumeDetails"> -->
+<!-- <p>{{resumeDetails?.Details.Certification.Certification_Name}}</p>
+<p>{{resumeDetails?.Details.Certification.Certifying_Body}}</p>
+<p>{{resumeDetails?.Details.Certification.Date_of_Certification}}</p> -->
+
+<!-- <p>{{resumeDetails?.Details.Technologies}}</p> -->
+<!-- <ul *ngFor="let user of resumeDetails?.Details.Technologies">
+    <li>{{user}}</li>
+</ul>
+<p>{{resumeDetails?.Details.Education[0].Degree}}</p>
+<ul *ngFor="let edu of resumeDetails?.Details.Education">
+    <li>
+        {{edu.Degree}}
+        <ul>
+            <li>
+                {{edu.Graduation_Date}}
+            </li>
+            <li>{{edu.Institution
+            }}</li>
+            <li>{{edu.Location}}</li>
+        </ul>
+    </li>
+</ul> -->
+    
+
+
+
+<mat-card>
+    <mat-card-content>
+       <div style="display: flex;justify-content: center;gap: 20px;">
+        <!-- <h2>{{name}}</h2>
+        <p>{{resumeDetails?.Current_role}}</p>
+        <p>{{resumeDetails?.Description}}</p>
+        <mat-divider></mat-divider> -->
+        <div>
+            <div>
+                <img src="../../assets/Images/download.jpg"/>
+                <h2>{{name}}</h2>
+                <p>{{resumeDetails?.Current_role}}</p>
+            </div>
+        </div>
+        <div>
+            <h2>PROFILE</h2>
+                <!-- <mat-divider></mat-divider> -->
+                <p>{{resumeDetails?.Description}}</p>
+                <h2>WORK EXPERIENCE</h2>
+                <!-- <mat-divider></mat-divider> -->
+                <div *ngFor="let exp of resumeDetails?.Details.Work_Experience">
+                    <div>
+                        <h3>{{exp.Job_role}}</h3>
+                        <p>{{exp.Company}}</p>
+                        <p>{{exp.Location}}</p>
+                        <p>{{exp.Dates_of_Employment}}</p>
+                        <ul *ngFor="let resp of exp.Responsibilities">
+                            <li>{{resp}}</li>
+                        </ul>
+                    </div>
+                </div>
+        </div>
+        <!-- <mat-grid-list [cols]="4" >
+            <mat-grid-tile [colspan]=1 >
+            <div>
+                <img src="../../assets/Images/download.jpg"/>
+                <h2>{{name}}</h2>
+                <p>{{resumeDetails?.Current_role}}</p>
+            </div>
+            </mat-grid-tile>
+            <mat-grid-tile [colspan]=3 >
+                <div>
+                    <h2>PROFILE</h2>
+                <mat-divider></mat-divider>
+                <p>{{resumeDetails?.Description}}</p>
+                <h2>WORK EXPERIENCE</h2>
+                <mat-divider></mat-divider>
+                <div *ngFor="let exp of resumeDetails?.Details.Work_Experience">
+                    <div>
+                        <h3>{{exp.Job_role}}</h3>
+                        <p>{{exp.Company}}</p>
+                        <p>{{exp.Location}}</p>
+                        <p>{{exp.Dates_of_Employment}}</p>
+                        <ul *ngFor="let resp of exp.Responsibilities">
+                            <li>{{resp}}</li>
+                        </ul>
+                    </div>
+                </div>
+                </div>
+               </mat-grid-tile>
+          </mat-grid-list> -->
+       </div>
+    </mat-card-content>
+</mat-card>
+
+
+  
+  
+
