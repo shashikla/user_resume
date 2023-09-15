@@ -17,7 +17,7 @@ import { ResumeComponent } from './resume/resume.component';
 import {MatInputModule} from '@angular/material/input';
 import { FormsModule }   from '@angular/forms';
 import { ResumeHompageComponent } from './resume-hompage/resume-hompage.component';
-
+import {MatGridListModule} from '@angular/material/grid-list';
 
 @NgModule({
   declarations: [
@@ -41,6 +41,7 @@ import { ResumeHompageComponent } from './resume-hompage/resume-hompage.componen
     MatListModule,
     MatInputModule,
     FormsModule,
+    MatGridListModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
