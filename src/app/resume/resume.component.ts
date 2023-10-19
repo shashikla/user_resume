@@ -1,7 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
 import { UserserviceService } from '../userservice.service';
 import { ActivatedRoute } from '@angular/router';
+import jsPDF from 'jspdf';
+import html2canvas from 'html2canvas';
+import html2PDF from 'jspdf-html2canvas';
+import html2pdf from 'html2pdf.js';
 
+// import html2pdf from 'html2pdf.js';
+
+// html2PDF(node, options);
 
 interface User {
   Name : string;
@@ -32,6 +39,8 @@ userData : User[] = [];
 resumeDetails : any;
 name:string="";
 
+@ViewChild('invoice') invoiceElement!: ElementRef;
+
   constructor(private service:UserserviceService, private route:ActivatedRoute) {
 
    }
@@ -55,5 +64,81 @@ name:string="";
   //    this.resumeDetails = result;
   //   })
   // }
+  // window.jsPDF = window.jspdf.jsPDF;
+
+  generatePDF() {
+    // var doc = new jsPDF();
+	
+    // // Source HTMLElement or a string containing HTML.
+    var elementHTML:any = document.getElementById('invoice');
+
+    const pdfOptions = {
+      // margin:10,
+      filname : 'resume.pdf',
+      image : { type: 'jpeg', quality: 0.98 },
+      html2canvas : { },
+      jsPDF : { format: 'a4', orientation: 'portrait'},
+      mode: 'legacy',
+      margin: [0.2, 0.1, 0.6, 0.2],
+      pagebreak: { after: 'section'}
+    };
+
+    // html2pdf().from(document.body).set(pdfOptions).outputPdf((pdf:any) => {
+    //   pdf.save('resume.pdf')
+    // })
+    html2pdf().from(elementHTML).set(pdfOptions).save('resume.pdf');
+
+
+    // html2PDF(elementHTML, {
+    //   jsPDF: {
+    //     format: 'a4',
+    //   },
+    //   imageType: 'image/jpeg',
+    //   output: './pdf/generate.pdf'
+    // });
+    
+    
+    
+    // code 2: 
+    var data:any = document.getElementById('invoice');
+
+    // html2canvas(data).then(canvas => {
+
+    //   var imgWidth = 208;
+    //   var pageHeight = 295;
+    //   var imgHeight = canvas.height * imgWidth / canvas.width;
+    //   var heightLeft = imgHeight;
+
+    //   const contentDataURL = canvas.toDataURL('image/png')
+    //   let pdf = new jsPDF('p', 'mm', 'a4'); // A4 size page of PDF
+    //   var position = 0;
+    //   pdf.addImage(contentDataURL, 'PNG', 0, position, imgWidth,imgHeight)
+    //   pdf.save('new-file.pdf'); // Generated PDF
+    // })
+
+
+    // html2canvas(data).then(canvas => {
+
+    //   const contentDataURL = canvas.toDataURL('image/png')
+    //   let pdf = new jsPDF('p', 'mm', 'a4'); // A4 size page of PDF
+    //   var width = pdf.internal.pageSize.getWidth();
+    //   var height = canvas.height * width / canvas.width;
+    //   pdf.addImage(contentDataURL, 'PNG', 0, 0, width,height)
+    //   pdf.save('new-file.pdf'); // Generated PDF
+    // })
+
+    // code 3:
+
+    // html2canvas(this.invoiceElement.nativeElement, { scale: 3 }).then((canvas) => {
+    //   const imageGeneratedFromTemplate = canvas.toDataURL('image/png');
+    //   const fileWidth = 200;
+    //   const generatedImageHeight = (canvas.height * fileWidth) / canvas.width;
+    //   let PDF = new jsPDF('p', 'mm', 'a4',);
+    //   PDF.addImage(imageGeneratedFromTemplate, 'PNG', 0, 5, fileWidth, generatedImageHeight,);
+    //   PDF.html(this.invoiceElement.nativeElement.innerHTML)
+    //   PDF.save('angular-invoice-pdf-demo.pdf');
+    // });
+
+  }
 
 }

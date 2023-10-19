@@ -34,7 +34,7 @@ export class ResumeHompageComponent implements OnInit {
   }
 
   sendData(e:any){
-    console.log("name here..", e.name);
+    // console.log("name here..", e.name);
     e.name = e.name.toLowerCase();
     this.showName(e.name);
     this.router.navigate(['/details',e.name]);

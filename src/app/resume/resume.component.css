@@ -9,6 +9,33 @@
  .mat-card{
     /* border: none !important;
     box-shadow: unset; */
-    width: 70%;
+    /* width: 50%; */
     margin: auto;
  }
+ h2{
+    color: #1c2737;
+ }
+ .column-left{
+    border: 1px solid ;
+    /* border-radius: 100px 100px 0 0; */
+    /* padding: 10px; */
+    width: 500px;
+ }
+ .user-img-name img{
+        /* border-radius: 50%; */
+        width: 200px;
+        height: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+ }
+ .head-chip{
+    border: 1px solid;
+    padding: 10px 30px 10px 0;
+    width: fit-content;
+    border-radius: 0 50px 50px 0;
+ }
+
+
+ /* #fefefe||#d1d1d2||#2d3c4f||#949496||#1c2737 */
