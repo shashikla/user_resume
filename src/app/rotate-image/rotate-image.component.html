@@ -1,0 +1,19 @@
+<!-- <img [@rotatedState]='state' style="width: 500px;" src="https://static1.squarespace.com/static/images/5dce9c42ded6bc4dbf7f534f?format=2500w" /> -->
+
+<div style="border: 1px solid blue;" class="outer-div" [@rotatedState]='state'>
+    <div  class="inner-div">
+        <button (click)="rotate()">Click1</button>
+        <button (click)="rotate()">Click2</button>
+    </div>
+</div>
+<!-- <button mat-raised-button color="primary" (click)="rotate()"><mat-icon>menu</mat-icon></button> -->
+
+<div class="menu-sidebar">
+    <ul [@rotatedState]='counter'>
+        <li >Home</li>
+        <li>contact</li>
+        <li>About Us</li>
+        <li>Services</li>
+    </ul>
+</div>
+

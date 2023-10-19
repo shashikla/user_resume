@@ -1,0 +1,49 @@
+{
+    "Name": "John Doe",
+    "Contact": {
+      "Email": "johndoe@email.com",
+      "LinkedIn Profile": "https://www.linkedin.com/in/johndoe/"
+    },
+    "Education": {
+      "Degree": "Bachelor's Degree in Computer Science",
+      "Institution": "XYZ University",
+      "Location": "City, State",
+      "Graduation Date": "May 20XX"
+    },
+    "Work Experience": {
+      "Software Engineer": {
+        "Company": "Tech Solutions Inc.",
+        "Location": "Tech Town, State",
+        "Dates of Employment": "June 20XX - Present",
+        "Responsibilities": [
+          "Develop and maintain web applications using Angular, JavaScript, HTML, and CSS.",
+          "Collaborate with cross-functional teams to design and implement web solutions.",
+          "Utilize Node.js for backend development and API integration.",
+          "Participate in code reviews, debugging, and troubleshooting for software reliability."
+        ]
+      }
+    },
+    "Certification": {
+      "Certification Name": "Web Development Certification",
+      "Certifying Body": "Tech Certifications Institute",
+      "Date of Certification": "March 20XX"
+    },
+    "Technologies": [
+      "Angular",
+      "JavaScript",
+      "HTML",
+      "CSS",
+      "Node.js"
+    ],
+    "Skills": [
+      "Web Development",
+      "Frontend Development",
+      "Responsive Web Design",
+      "UI/UX Design",
+      "Version Control (Git)",
+      "RESTful APIs",
+      "Problem Solving",
+      "Team Collaboration",
+      "Agile/Scrum Methodologies"
+    ]
+  }

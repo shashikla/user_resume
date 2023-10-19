@@ -27,8 +27,12 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.css"
             ],
+            "allowedCommonJsDependencies": [
+              "html2pdf.js"
+          ],
             "scripts": []
           },
           "configurations": {
@@ -94,6 +98,7 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -101,5 +106,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "b1218373-8461-4f1a-b2b7-48aa0bbab748"
   }
 }

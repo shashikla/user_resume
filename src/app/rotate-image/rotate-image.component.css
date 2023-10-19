@@ -1,0 +1,43 @@
+.outer-div{
+    width: 150px;
+    padding: 40px;
+    border-radius: 50%;
+    POSITION: absolute;
+    top: -134px;
+    left: -91px;
+}
+
+.inner-div{
+    width: 150px;
+    height: 150px;
+    DISPLAY: flex;
+    justify-content: space-between;
+    align-items: end;
+    flex-direction: column;
+}
+.menu-sidebar{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+/* ul li {
+    animation-name: scenario1;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+  }
+  
+  @keyframes scenario1 {
+      0% { transform: translate(0px,0px); }
+      100% { transform: translate(50px, 0px); }
+} */
+
+
+
