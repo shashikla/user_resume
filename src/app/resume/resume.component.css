@@ -11,14 +11,17 @@
     box-shadow: unset; */
     /* width: 50%; */
     margin: auto;
+    font-family: 'Poppins', sans-serif;
  }
  h2{
     color: #1c2737;
  }
  .column-left{
-    border: 1px solid ;
+    /* border: 1px solid ; */
     /* border-radius: 100px 100px 0 0; */
     /* padding: 10px; */
+    font-family: 'Poppins', sans-serif;
+    background: #7aaec3;
     width: 500px;
  }
  .user-img-name img{
@@ -31,10 +34,13 @@
         margin: auto;
  }
  .head-chip{
-    border: 1px solid;
+    /* border: 1px solid; */
     padding: 10px 30px 10px 0;
     width: fit-content;
     border-radius: 0 50px 50px 0;
+ }
+ #resume{
+   background: #d7e4eb;
  }
 
 

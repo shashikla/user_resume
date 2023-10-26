@@ -6,7 +6,8 @@
     "Details": {
       "Contact": {
         "Email": "johndoe@email.com",
-        "LinkedIn_Profile": "https://www.linkedin.com/in/johndoe/"
+        "LinkedIn_Profile": "https://www.linkedin.com/in/johndoe/",
+        "mobileNumber": 9972450512
       },
       "Education": [
         {
@@ -78,7 +79,8 @@
     "Details": {
       "Contact": {
         "Email": "swaghmare.p@gmail.com",
-        "LinkedIn_Profile": "https://www.linkedin.com/in/johndoe/"
+        "LinkedIn_Profile": "https://www.linkedin.com/in/johndoe/",
+        "mobileNumber": 9972450512
       },
       "Education": [
         {

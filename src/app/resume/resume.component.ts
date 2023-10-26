@@ -5,6 +5,7 @@ import jsPDF from 'jspdf';
 import html2canvas from 'html2canvas';
 import html2PDF from 'jspdf-html2canvas';
 import html2pdf from 'html2pdf.js';
+import { UserDataService } from '../user-data.service';
 
 // import html2pdf from 'html2pdf.js';
 
@@ -41,20 +42,24 @@ name:string="";
 
 @ViewChild('invoice') invoiceElement!: ElementRef;
 
-  constructor(private service:UserserviceService, private route:ActivatedRoute) {
+  constructor(private service:UserserviceService, 
+              private route:ActivatedRoute,
+              private userService:UserDataService) {
 
    }
 
   ngOnInit(): void {
     this.route.params.subscribe(params => {
-      const userName = params['name'];
+      const userName = (params['name']).toLowerCase();
       this.name = userName.toUpperCase();
-      this.service.getJSON().subscribe((user) =>{
-        this.resumeDetails = user.find((ele:any)=>ele.Name.toLowerCase() === userName);
-        console.log( this.resumeDetails);
-      })
-      this.resumeDetails = this.userData.find((ele)=>ele.Name.toLowerCase() === userName);
-    })
+      this.userService.getDataByUser(userName).subscribe((user)=>{
+        this.resumeDetails = user.find((ele:any)=>{
+          return ele;
+        });
+      });
+    });
+
+    
   }
 
   // showName(name:string){
