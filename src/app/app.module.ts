@@ -18,6 +18,7 @@ import {MatInputModule} from '@angular/material/input';
 import { FormsModule }   from '@angular/forms';
 import { ResumeHompageComponent } from './resume-hompage/resume-hompage.component';
 import {MatGridListModule} from '@angular/material/grid-list';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
 
 
 @NgModule({
@@ -43,6 +44,7 @@ import {MatGridListModule} from '@angular/material/grid-list';
     MatInputModule,
     FormsModule,
     MatGridListModule,
+    MatSnackBarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

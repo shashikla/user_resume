@@ -62,18 +62,8 @@ name:string="";
     
   }
 
-  // showName(name:string){
-  //   this.service.getJSON().subscribe((data)=>{
-  //     this.userData = data;
-  //    const result = this.userData.find((ele)=>ele.Name.toLowerCase() === name);
-  //    this.resumeDetails = result;
-  //   })
-  // }
-  // window.jsPDF = window.jspdf.jsPDF;
 
   generatePDF() {
-    // var doc = new jsPDF();
-	
     // // Source HTMLElement or a string containing HTML.
     var elementHTML:any = document.getElementById('invoice');
 
@@ -87,12 +77,10 @@ name:string="";
       margin: [0.2, 0.1, 0.6, 0.2],
       pagebreak: { after: 'section'}
     };
-
-    // html2pdf().from(document.body).set(pdfOptions).outputPdf((pdf:any) => {
-    //   pdf.save('resume.pdf')
-    // })
     html2pdf().from(elementHTML).set(pdfOptions).save('resume.pdf');
 
+    var data:any = document.getElementById('invoice');
+    
 
     // html2PDF(elementHTML, {
     //   jsPDF: {
@@ -101,11 +89,9 @@ name:string="";
     //   imageType: 'image/jpeg',
     //   output: './pdf/generate.pdf'
     // });
-    
-    
+  
     
     // code 2: 
-    var data:any = document.getElementById('invoice');
 
     // html2canvas(data).then(canvas => {
 
